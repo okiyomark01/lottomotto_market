@@ -8,7 +8,6 @@ export const notFoundErrorHandler = (req, res, next) => {
 
 // Error Handler
 export const errorHandler = (err, req, res, next) => {
-    console.log("Inside error");
     
     const statusCode = res.statusCode === 200 ? 500 : res.statusCode;
     res.status(statusCode);
