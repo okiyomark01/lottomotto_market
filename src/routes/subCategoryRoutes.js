@@ -1,10 +1,10 @@
 import express from "express";
-import { createSubCategory, deleteSubCategory, getAllSubCategorys, getSubCategoryBySlug, updateSubCategory } from "../controllers/subSubCategoryController.js";
+import { createSubCategory, deleteSubCategory, getAllSubCategory, getSubCategoryBySlug, updateSubCategory } from "../controllers/subCategoryController.js";
 
 const subSubCategoryRouter = express.Router();
 
 subSubCategoryRouter.post("/", createSubCategory);
-subSubCategoryRouter.get("/all", getAllSubCategorys);
+subSubCategoryRouter.get("/all", getAllSubCategory);
 subSubCategoryRouter.get("/:slug", getSubCategoryBySlug);
 subSubCategoryRouter.put("/:id", updateSubCategory);
 subSubCategoryRouter.delete("/:id", deleteSubCategory);

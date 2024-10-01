@@ -28,13 +28,13 @@ export const getAllWishlist = expressAsyncHandler(async (req, res) => {
     }
 });
 
-// @desc Get a Wishlist by slug
-// @router /api/wishlist/:slug
+// @desc Get a Wishlist by id
+// @router /api/wishlist/:id
 // @access Public
 
-export const getWishlistBySlug = expressAsyncHandler(async (req, res) => {
+export const getWishlistById = expressAsyncHandler(async (req, res) => {
     try {
-        const wishlist = await Wishlist.findOne({ slug:req.params.slug });
+        const wishlist = await Wishlist.findById(req.params.id);
         res.status(201).json({ status: true, data: wishlist });
     } catch (error) {
         throw new AppError(error, 400);

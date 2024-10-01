@@ -12,6 +12,7 @@ import brandRouter from "./src/routes/brandRoutes.js";
 import categoryRouter from "./src/routes/categoryRoutes.js";
 import subSubCategoryRouter from "./src/routes/subCategoryRoutes.js";
 import wishlistRouter from "./src/routes/wishlistRoutes.js";
+import reviewRouter from "./src/routes/reviewRoutes.js";
 
 
 // Load Environment variables from .env file
@@ -37,6 +38,7 @@ app.use("/api/brand", brandRouter);
 app.use("/api/wishlist", wishlistRouter);
 app.use("/api/category", categoryRouter);
 app.use("/api/subcategory", subSubCategoryRouter);
+app.use("/api/review", reviewRouter);
 
 
 
